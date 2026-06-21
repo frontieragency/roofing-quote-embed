@@ -9,47 +9,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css?v=2721279b" />
   <style>
+    /* ---- Premium palette: Obsidian & Brass (dark) ---- */
+    :root{ --pg:#0c0d10; --frame:#131419; --bar:#16171c; --urlbg:#0e0f12;
+      --wc-bg:#1f222a; --wc-cream:#181a20; --wc-text:#f3efe7; --wc-muted:rgba(243,239,231,0.55);
+      --wc-line:rgba(255,255,255,0.09); --wc-accent:#c9a96a; --wc-on-accent:#15140f; --wc-dark:#f3efe7; }
     html, body { margin:0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: #0f3329;
-      background-image: radial-gradient(125% 85% at 50% -15%, #16463a 0%, #0f3329 62%);
-      min-height: 100vh;
-      padding: clamp(34px, 6vw, 68px) 16px clamp(28px, 5vw, 52px);
-      box-sizing: border-box;
-    }
-    /* ---- Browser-window mockup (matches the helloc5 inspiration, roofing brand) ---- */
-    .rq-browser {
-      max-width: 860px; margin: 0 auto; background: #fff;
-      border-radius: 16px; overflow: hidden;
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 50px 110px -45px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.04);
-    }
-    .rq-bar { display:flex; align-items:center; gap:14px; padding:12px 16px; background:#eaf0ea; border-bottom:1px solid var(--wc-line); }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--pg);
+      background-image:radial-gradient(125% 85% at 50% -15%,#191a1f 0%,var(--pg) 62%);
+      min-height:100vh; padding:clamp(34px,6vw,68px) 16px clamp(28px,5vw,52px); box-sizing:border-box; }
+    .rq-browser { max-width:860px; margin:0 auto; background:var(--frame); border-radius:16px; overflow:hidden;
+      border:1px solid var(--wc-line); box-shadow:0 50px 110px -45px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.04); }
+    .rq-bar { display:flex; align-items:center; gap:14px; padding:12px 16px; background:var(--bar); border-bottom:1px solid var(--wc-line); }
     .rq-dots { display:inline-flex; gap:7px; flex-shrink:0; }
     .rq-dots i { width:11px; height:11px; border-radius:50%; display:inline-block; }
     .rq-dots i:nth-child(1){background:#ff5f57} .rq-dots i:nth-child(2){background:#febc2e} .rq-dots i:nth-child(3){background:#28c840}
-    .rq-url { flex:1; text-align:center; font-size:.82rem; color:var(--wc-muted);
-               background:#fff; border:1px solid var(--wc-line); border-radius:999px;
-               padding:6px 14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .rq-body { padding: clamp(22px,4vw,38px) clamp(20px,4vw,38px) clamp(26px,5vw,40px); }
-    .rq-head { max-width: 600px; }
-    .rq-eyebrow { display:inline-block; font-size:.74rem; font-weight:700; letter-spacing:.14em;
-                   text-transform:uppercase; color:var(--wc-accent); border-bottom:2px solid var(--wc-accent);
-                   padding-bottom:.3rem; margin:0 0 .85rem; }
-    .rq-h { font-family: var(--wc-ff-display); font-weight:800; letter-spacing:-.01em; line-height:1.05;
-             font-size: clamp(1.75rem, 3.6vw, 2.5rem); color: var(--wc-dark); margin:0 0 .6rem; }
-    .rq-sub { color:#3f5249; font-size:1.02rem; line-height:1.5; margin:0 0 1.1rem; }
-    .rq-trust { display:flex; flex-wrap:wrap; gap:.55rem 1.1rem; margin:0; padding:0;
-                 font-size:.8rem; font-weight:600; color:var(--wc-muted); }
+    .rq-url { flex:1; text-align:center; font-size:.82rem; color:var(--wc-muted); background:var(--urlbg);
+      border:1px solid var(--wc-line); border-radius:999px; padding:6px 14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .rq-body { padding:clamp(22px,4vw,38px) clamp(20px,4vw,38px) clamp(26px,5vw,40px); }
+    .rq-head { max-width:600px; }
+    .rq-eyebrow { display:inline-block; font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--wc-accent); border-bottom:2px solid var(--wc-accent); padding-bottom:.3rem; margin:0 0 .85rem; }
+    .rq-h { font-family:var(--wc-ff-display); font-weight:800; letter-spacing:-.01em; line-height:1.05;
+      font-size:clamp(1.75rem,3.6vw,2.5rem); color:var(--wc-text); margin:0 0 .6rem; }
+    .rq-sub { color:var(--wc-muted); font-size:1.02rem; line-height:1.5; margin:0 0 1.1rem; }
+    .rq-trust { display:flex; flex-wrap:wrap; gap:.55rem 1.1rem; margin:0; font-size:.8rem; font-weight:600; color:var(--wc-muted); }
     .rq-trust span { display:inline-flex; align-items:center; gap:.4rem; }
     .rq-trust svg { width:15px; height:15px; color:var(--wc-accent); flex-shrink:0; }
-    .rq-rule { height:1px; background:var(--wc-line); margin: clamp(20px,3.5vw,28px) 0 clamp(16px,3vw,22px); }
-    /* Tool sits directly on white now — strip the section's own frame */
+    .rq-rule { height:1px; background:var(--wc-line); margin:clamp(20px,3.5vw,28px) 0 clamp(16px,3vw,22px); }
     .wc-section--quote { padding:0; background:transparent; }
     .wc-section--quote .wc-wrap { max-width:none; padding:0; }
-    /* Step indicator: bolder + pop */
-    .wc-q__steps { font-size:.82rem; font-weight:700; gap:1.85rem; }
+    .wc-h2, .wc-q__field span, .wc-q__svc-name { color:var(--wc-text); }
+    .wc-q__steps { font-size:.82rem; font-weight:700; gap:1.85rem; color:var(--wc-muted); }
     .wc-q__steps span { position:relative; padding-bottom:6px; }
     .wc-q__steps span.on { color:var(--wc-accent); }
     .wc-q__steps span.on::after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--wc-accent); border-radius:2px; }
