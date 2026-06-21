@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instant Roofing Quote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css?v=2721279b" />
+  <style>
+    /* Embed mode: strip page chrome so only the quote tool shows */
+    html, body { margin:0; background:transparent; }
+    .wc-section--quote { padding: 20px 0; background:transparent; }
+    .wc-wrap { max-width: 760px; }
+  </style>
+</head>
+<body>
+  <section class="wc-section wc-section--quote">
+    <div class="wc-wrap">
+      <div id="wcQuote" class="wc-quote" data-disclaimer="Estimate only — final price confirmed after a free roof inspection. Storm/hail and insurance work is quoted separately.">
+        <noscript><p>Please enable JavaScript to use the instant quote tool.</p></noscript>
+      </div>
+    </div>
+  </section>
+  <script>window.QUOTE_CONFIG = {"business": "North Star Roofing & Restoration", "ajax": "", "domain": "northstarroofingtx.com", "phone": "(972) 555-0184", "phoneRaw": "+19725550184", "spread": 0.18, "roundTo": 100, "disclaimer": "Estimate only \u2014 final price confirmed after a free roof inspection. Storm/hail and insurance work is quoted separately.", "instant": [{"key": "replacement", "name": "Roof replacement", "base": 0, "fields": [{"key": "size", "label": "Roof size", "type": "select", "options": [{"value": "small", "label": "Small home (~1,500 sq ft)", "base": 9000}, {"value": "medium", "label": "Average home (~2,000 sq ft)", "base": 12000}, {"value": "large", "label": "Large home (~2,800 sq ft)", "base": 17000}, {"value": "xl", "label": "Extra-large (3,500+ sq ft)", "base": 22000}]}, {"key": "material", "label": "Shingle / material", "type": "select", "options": [{"value": "three_tab", "label": "3-tab asphalt shingle", "mult": 0.85}, {"value": "architectural", "label": "Architectural / dimensional shingle", "mult": 1.0}, {"value": "impact", "label": "Impact-resistant (Class 4)", "mult": 1.2}, {"value": "metal", "label": "Standing-seam metal", "mult": 1.95}]}, {"key": "stories", "label": "Stories", "type": "select", "options": [{"value": "one", "label": "Single-story", "mult": 1.0}, {"value": "two", "label": "Two-story", "mult": 1.12}]}, {"key": "pitch", "label": "Roof pitch / complexity", "type": "select", "options": [{"value": "standard", "label": "Standard pitch", "mult": 1.0}, {"value": "steep", "label": "Steep or cut-up roof", "mult": 1.18}]}]}, {"key": "repair", "name": "Roof repair", "base": 0, "fields": [{"key": "scope", "label": "What needs repair?", "type": "select", "options": [{"value": "minor", "label": "Minor leak / a few shingles", "base": 450}, {"value": "moderate", "label": "Section repair, flashing or vent", "base": 1200}, {"value": "major", "label": "Multiple areas / large section", "base": 3000}]}, {"key": "material", "label": "Roof type", "type": "select", "options": [{"value": "shingle", "label": "Asphalt shingle", "mult": 1.0}, {"value": "tile", "label": "Tile", "mult": 1.45}, {"value": "metal", "label": "Metal", "mult": 1.35}, {"value": "flat", "label": "Flat / low-slope", "mult": 1.25}]}]}, {"key": "gutters", "name": "Gutters", "base": 0, "fields": [{"key": "size", "label": "Home size", "type": "select", "options": [{"value": "small", "label": "Single-story (~150 ft)", "base": 1500}, {"value": "medium", "label": "Two-story / larger (~220 ft)", "base": 2400}, {"value": "large", "label": "Large / complex (~300 ft)", "base": 3400}]}, {"key": "type", "label": "Gutter type", "type": "select", "options": [{"value": "seamless5", "label": "Seamless aluminum 5\"", "mult": 1.0}, {"value": "oversized6", "label": "Oversized 6\"", "mult": 1.3}, {"value": "guards", "label": "With gutter guards", "mult": 1.7}]}]}], "intake": [{"key": "storm", "name": "Storm / hail damage", "fields": []}, {"key": "insurance", "name": "Insurance claim help", "fields": []}, {"key": "inspection", "name": "Free roof inspection", "fields": []}, {"key": "other", "name": "Something else / not sure", "fields": []}]};</script>
+  <script src="scripts/quote.js"></script>
+</body>
+</html>
