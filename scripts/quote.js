@@ -57,10 +57,12 @@
   // ---- step renderers ----  (1 Service -> 2 Contact -> 3 Details -> result)
   function render() {
     root.innerHTML = '';
+    // current step is the bright one; the others stay muted
+    var stp = state.step > 3 ? 3 : state.step;
     root.appendChild(el('<div class="wc-q__steps">' +
-      '<span class="' + (state.step >= 1 ? 'on' : '') + '">1 Service</span>' +
-      '<span class="' + (state.step >= 2 ? 'on' : '') + '">2 Contact</span>' +
-      '<span class="' + (state.step >= 3 ? 'on' : '') + '">3 Details</span></div>'));
+      '<span class="' + (stp === 1 ? 'on' : '') + '">1 Service</span>' +
+      '<span class="' + (stp === 2 ? 'on' : '') + '">2 Contact</span>' +
+      '<span class="' + (stp === 3 ? 'on' : '') + '">3 Details</span></div>'));
     if (state.step === 1) renderServices();
     else if (state.step === 2) renderContact();
     else if (state.step === 3) renderDetails();
