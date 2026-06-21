@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css?v=2721279b" />
   <style>
-    /* ---- Premium palette: Obsidian & Brass (dark) ---- */
-    :root{ --pg:#0c0d10; --frame:#131419; --bar:#16171c; --urlbg:#0e0f12;
-      --wc-bg:#1f222a; --wc-cream:#181a20; --wc-text:#f3efe7; --wc-muted:rgba(243,239,231,0.55);
-      --wc-line:rgba(255,255,255,0.09); --wc-accent:#c9a96a; --wc-on-accent:#15140f; --wc-dark:#f3efe7; }
+    /* ---- Premium palette: light card floating on a soft charcoal surround ---- */
+    :root{ --pg:#1d2024; --frame:#ffffff; --fbord:rgba(255,255,255,0.10); --bar:#f4f2ed; --urlbg:#ffffff;
+      --wc-bg:#ffffff; --wc-cream:#f7f5f0; --wc-text:#1b1a17; --wc-muted:rgba(27,26,23,0.56);
+      --wc-line:rgba(27,26,23,0.12); --wc-accent:#a9762b; --wc-on-accent:#ffffff; --wc-dark:#1b1a17; }
     html, body { margin:0; }
     body { font-family:'Inter',system-ui,sans-serif; background:var(--pg);
-      background-image:radial-gradient(125% 85% at 50% -15%,#191a1f 0%,var(--pg) 62%);
+      background-image:radial-gradient(125% 85% at 50% -15%,#2a2e34 0%,var(--pg) 62%);
       min-height:100vh; padding:clamp(34px,6vw,68px) 16px clamp(28px,5vw,52px); box-sizing:border-box; }
     .rq-browser { max-width:860px; margin:0 auto; background:var(--frame); border-radius:16px; overflow:hidden;
-      border:1px solid var(--wc-line); box-shadow:0 50px 110px -45px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.04); }
+      border:1px solid var(--fbord); box-shadow:0 50px 110px -45px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.03); }
     .rq-bar { display:flex; align-items:center; gap:14px; padding:12px 16px; background:var(--bar); border-bottom:1px solid var(--wc-line); }
     .rq-dots { display:inline-flex; gap:7px; flex-shrink:0; }
     .rq-dots i { width:11px; height:11px; border-radius:50%; display:inline-block; }
@@ -43,6 +43,9 @@
     .wc-q__steps span { position:relative; padding-bottom:6px; }
     .wc-q__steps span.on { color:var(--wc-accent); }
     .wc-q__steps span.on::after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--wc-accent); border-radius:2px; }
+    /* outline button ships white (for dark themes) — make it dark on this light card */
+    .wc-btn--outline { color:var(--wc-text); border-color:var(--wc-line); }
+    .wc-btn--outline:hover { border-color:var(--wc-text); }
   </style>
 </head>
 <body>
