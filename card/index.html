@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Instant Roofing Quote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="../styles/main.css?v=2721279b"/>
+<style>
+  :root{ --wc-bg:#ffffff; --wc-cream:#f7f5f0; --wc-text:#1b1a17; --wc-muted:rgba(27,26,23,0.56);
+    --wc-line:rgba(27,26,23,0.12); --wc-accent:#a9762b; --wc-on-accent:#ffffff; --wc-dark:#1b1a17; }
+  html,body{margin:0;background:#fff;}
+  body{font-family:'Inter',system-ui,sans-serif;}
+  .rq-pad{ max-width:760px; margin:0 auto; padding:clamp(28px,4vw,44px) clamp(22px,4vw,40px) clamp(30px,5vw,48px); }
+  .rq-head{max-width:620px;}
+  .rq-eyebrow{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--wc-accent);border-bottom:2px solid var(--wc-accent);padding-bottom:.3rem;margin:0 0 .85rem;}
+  .rq-h{font-family:var(--wc-ff-display);font-weight:800;letter-spacing:-.01em;line-height:1.05;font-size:clamp(1.75rem,3.4vw,2.5rem);color:var(--wc-text);margin:0 0 .6rem;}
+  .rq-sub{color:var(--wc-muted);font-size:1.02rem;line-height:1.5;margin:0 0 1.1rem;}
+  .rq-trust{display:flex;flex-wrap:wrap;gap:.55rem 1.1rem;margin:0;font-size:.8rem;font-weight:600;color:var(--wc-muted);}
+  .rq-trust span{display:inline-flex;align-items:center;gap:.4rem;}.rq-trust svg{width:15px;height:15px;color:var(--wc-accent);flex-shrink:0;}
+  .rq-rule{height:1px;background:var(--wc-line);margin:clamp(20px,3.5vw,28px) 0 clamp(16px,3vw,22px);}
+  .wc-section--quote{padding:0;background:transparent;}.wc-section--quote .wc-wrap{max-width:none;padding:0;}
+  .wc-h2,.wc-q__field span,.wc-q__svc-name{color:var(--wc-text);}
+  .wc-q__steps{font-size:.82rem;font-weight:700;gap:1.85rem;color:var(--wc-muted);}
+  .wc-q__steps span{position:relative;padding-bottom:6px;}.wc-q__steps span.on{color:var(--wc-accent);}
+  .wc-q__steps span.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--wc-accent);border-radius:2px;}
+  .wc-btn--outline{color:var(--wc-text);border-color:var(--wc-line);} .wc-btn--outline:hover{border-color:var(--wc-text);}
+</style></head>
+<body>
+  <div class="rq-pad">
+    <div class="rq-head">
+      <span class="rq-eyebrow">Instant Estimate</span>
+      <h1 class="rq-h">Get a roofing price in 60 seconds.</h1>
+      <p class="rq-sub">Answer a few quick questions for a ballpark range — then confirm the exact price after a free roof inspection.</p>
+      <div class="rq-trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Licensed &amp; fully insured</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> GAF Master Elite</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free roof inspection</span></div>
+    </div>
+    <div class="rq-rule"></div>
+    <section class="wc-section wc-section--quote"><div class="wc-wrap">
+      <div id="wcQuote" class="wc-quote" data-disclaimer="Estimate only — final price confirmed after a free roof inspection. Storm/hail and insurance work is quoted separately."><noscript><p>Please enable JavaScript to use the instant quote tool.</p></noscript></div>
+    </div></section>
+  </div>
+  <script>window.QUOTE_CONFIG = {"business": "North Star Roofing & Restoration", "ajax": "", "domain": "northstarroofingtx.com", "phone": "(972) 555-0184", "phoneRaw": "+19725550184", "spread": 0.18, "roundTo": 100, "disclaimer": "Estimate only \u2014 final price confirmed after a free roof inspection. Storm/hail and insurance work is quoted separately.", "instant": [{"key": "replacement", "name": "Roof replacement", "base": 0, "fields": [{"key": "size", "label": "Roof size", "type": "select", "options": [{"value": "small", "label": "Small home (~1,500 sq ft)", "base": 9000}, {"value": "medium", "label": "Average home (~2,000 sq ft)", "base": 12000}, {"value": "large", "label": "Large home (~2,800 sq ft)", "base": 17000}, {"value": "xl", "label": "Extra-large (3,500+ sq ft)", "base": 22000}]}, {"key": "material", "label": "Shingle / material", "type": "select", "options": [{"value": "three_tab", "label": "3-tab asphalt shingle", "mult": 0.85}, {"value": "architectural", "label": "Architectural / dimensional shingle", "mult": 1.0}, {"value": "impact", "label": "Impact-resistant (Class 4)", "mult": 1.2}, {"value": "metal", "label": "Standing-seam metal", "mult": 1.95}]}, {"key": "stories", "label": "Stories", "type": "select", "options": [{"value": "one", "label": "Single-story", "mult": 1.0}, {"value": "two", "label": "Two-story", "mult": 1.12}]}, {"key": "pitch", "label": "Roof pitch / complexity", "type": "select", "options": [{"value": "standard", "label": "Standard pitch", "mult": 1.0}, {"value": "steep", "label": "Steep or cut-up roof", "mult": 1.18}]}]}, {"key": "repair", "name": "Roof repair", "base": 0, "fields": [{"key": "scope", "label": "What needs repair?", "type": "select", "options": [{"value": "minor", "label": "Minor leak / a few shingles", "base": 450}, {"value": "moderate", "label": "Section repair, flashing or vent", "base": 1200}, {"value": "major", "label": "Multiple areas / large section", "base": 3000}]}, {"key": "material", "label": "Roof type", "type": "select", "options": [{"value": "shingle", "label": "Asphalt shingle", "mult": 1.0}, {"value": "tile", "label": "Tile", "mult": 1.45}, {"value": "metal", "label": "Metal", "mult": 1.35}, {"value": "flat", "label": "Flat / low-slope", "mult": 1.25}]}]}, {"key": "gutters", "name": "Gutters", "base": 0, "fields": [{"key": "size", "label": "Home size", "type": "select", "options": [{"value": "small", "label": "Single-story (~150 ft)", "base": 1500}, {"value": "medium", "label": "Two-story / larger (~220 ft)", "base": 2400}, {"value": "large", "label": "Large / complex (~300 ft)", "base": 3400}]}, {"key": "type", "label": "Gutter type", "type": "select", "options": [{"value": "seamless5", "label": "Seamless aluminum 5\"", "mult": 1.0}, {"value": "oversized6", "label": "Oversized 6\"", "mult": 1.3}, {"value": "guards", "label": "With gutter guards", "mult": 1.7}]}]}], "intake": [{"key": "storm", "name": "Storm / hail damage", "fields": []}, {"key": "insurance", "name": "Insurance claim help", "fields": []}, {"key": "inspection", "name": "Free roof inspection", "fields": []}, {"key": "other", "name": "Something else / not sure", "fields": []}]};</script>
+  <script src="../scripts/quote.js"></script>
+</body></html>
